@@ -1,0 +1,6 @@
+[Como fazer?]
+- Substituir os dados da função responsável pelo envio dos e-mails pelos valores informados no entry da interface gráfica.
+Para isso, o comando ".get()" é necessário no final da variável entry.
+
+- Em relação ao botões "Enviar" e "Abrir Lista", a instrução "command" deve ser incluida no código junto com a função responsável 
+pela ação indicada, ou seja, abrir a lista e enviar os emails. 
