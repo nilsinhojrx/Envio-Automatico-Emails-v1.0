@@ -19,7 +19,7 @@ def enviaemail(From, To, Assunto, Login, Senha, txt):
     msg.attach(mensage)
     
     try:
-        with sp.SMTP(host='smtp.gmail.com', port='587') as smtp:
+        with sp.SMTP(host='smtp.gmail.com', port='587') as smtp: # caso use outro provedor de e-mails, sugiro pesquisar qual host e port deve ser usada.
             smtp.ehlo()
             smtp.starttls()
             smtp.login(Login, Senha)
@@ -28,7 +28,9 @@ def enviaemail(From, To, Assunto, Login, Senha, txt):
         print('E-mail enviado com sucesso!')     
     except:
         print('Erro ao enviar E-mail!')
-        
+
+# Dados para envio das mensagens
 txt = 'Olá, tudo bem? Como estão as coisas? Estou desenvolendo um sofware que envia e-mails automático e usei o E-mail de Nilson como teste.'
-    
-enviaemail('Nilsinho JR', 'nilsoncamposj@gmail.com', 'teste de automação', 'nhbcjr@gmail.com', 'nilson10000', txt )
+usuario = input("Digite o e-mail de usuário: ")
+senha = input("Digite a senha: ")
+enviaemail('Nilsinho JR', 'nilsoncamposj@gmail.com', 'teste de automação', usuario , senha , txt )
