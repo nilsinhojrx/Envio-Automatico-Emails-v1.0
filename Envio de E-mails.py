@@ -33,4 +33,9 @@ def enviaemail(From, To, Assunto, Login, Senha, txt):
 txt = 'Olá, tudo bem? Como estão as coisas? Estou desenvolendo um sofware que envia e-mails automático e usei o E-mail de Nilson como teste.'
 usuario = input("Digite o e-mail de usuário: ")
 senha = input("Digite a senha: ")
-enviaemail('Nilsinho JR', 'nilsoncamposj@gmail.com', 'teste de automação', usuario , senha , txt )
+destinatario = input("Digite o e-mail do destinatário: ")
+ass = input("Digite o assunto da mensagem: ")
+From = input("Digite o nome de quem está enviando a mensagem: ")
+
+# Invocando a função
+enviaemail(From, To, ass, usuario , senha , txt )
