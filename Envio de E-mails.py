@@ -29,13 +29,14 @@ def enviaemail(From, To, Assunto, Login, Senha, txt):
     except:
         print('Erro ao enviar E-mail!')
 
-# Dados para envio das mensagens
-txt = 'Olá, tudo bem? Como estão as coisas? Estou desenvolendo um sofware que envia e-mails automático e usei o E-mail de Nilson como teste.'
+
+txt = input("Informe a mensagem que será enviada: ")
 usuario = input("Digite o e-mail de usuário: ")
 senha = input("Digite a senha: ")
-destinatario = input("Digite o e-mail do destinatário: ")
 ass = input("Digite o assunto da mensagem: ")
 From = input("Digite o nome de quem está enviando a mensagem: ")
+To = input("Digite o e-mail do destinatário: ")
 
 # Invocando a função
 enviaemail(From, To, ass, usuario , senha , txt )
+
